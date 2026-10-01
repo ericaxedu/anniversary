@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7b7c9"><title>Erica ♡ Josol — October 7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@0,600;1,600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bgpic"></div><audio id="bgm" src="assets/bgmusic.mp3" loop preload="auto"></audio>
+<div id="float"></div><div id="bar"><i id="prog"></i></div>
+<button id="home" onclick="go(1)" aria-label="Home">🏠</button>
+
+<section class="page active" id="p0"><div class="card lock" id="lockcard">
+<div class="bigheart">♡</div><h1>Erica &amp; Josol</h1>
+<p>Four years of us.<br>A little surprise before our new chapter.</p><h3>🔐 Enter our special date</h3>
+<div id="dots"><span></span><span></span><span></span><span></span></div><div class="keys">
+<button onclick="key(1)">1</button><button onclick="key(2)">2</button><button onclick="key(3)">3</button>
+<button onclick="key(4)">4</button><button onclick="key(5)">5</button><button onclick="key(6)">6</button>
+<button onclick="key(7)">7</button><button onclick="key(8)">8</button><button onclick="key(9)">9</button>
+<span></span><button onclick="key(0)">0</button><button onclick="back()">⌫</button></div>
+<small id="hint"></small></div></section>
+
+<section class="page" id="p1"><div class="content">
+<span class="badge">4th anniversary 🎀</span><h1>Happy Anniversary,<br><em>my love.</em> 💗</h1>
+<p class="lead">Four years of memories, laughter, little moments—and a new chapter waiting for us.</p>
+<div class="cd" id="cd"></div>
+<div class="menu">
+<button data-go="2"><span class="ic">📖</span>Our Story</button><button data-go="3"><span class="ic">📸</span>Our Memories</button>
+<button data-go="4"><span class="ic">💌</span>My Letter</button><button data-go="5"><span class="ic">🌙</span>Open When</button>
+<button data-go="6"><span class="ic">🌍</span>Our LDR Chapter</button><button data-go="8"><span class="ic">🎵</span>Our Song</button>
+</div></div></section>
+
+<section class="page" id="p2"><div class="content"><span class="badge">Our story 📖</span>
+<h1>Four years of <em>us.</em></h1><p>Tap a chapter ♡</p><div class="tiles">
+<button data-p="🏖️|Year One: The Beach|Our first year was full of beach dates. It wasn't always easy, because we were still getting to know each other and had our ups and downs. But we kept choosing to understand each other, and that's what made us stronger."><span class="ic">🏖️</span><b>The Beach Dates</b><small>Year 1</small></button>
+<button data-p="🕹️|Year Two: Our 2nd Anniversary|We celebrated our 2nd anniversary at the mall in Sorsogon. We went gala-ing, played at the arcade, took photobooth pictures, and had a food trip. It was a simple day, but it became one of my favorites."><span class="ic">🕹️</span><b>Arcade &amp; Photobooth</b><small>Year 2</small></button>
+<button data-p="🍜|Year Three: Food Adventures|In our third year, we explored and tried new restaurants around our place, because we both love to eat out on our dates. Every meal became another memory with you."><span class="ic">🍜</span><b>Food Adventures</b><small>Year 3</small></button>
+<button data-p="🚗|Year Four: Road Trip|For our 4th year, we went on a road trip, including a stop at the mini Siargao in Gubat and other places. Four years in, and I still want to go on every adventure with you."><span class="ic">🚗</span><b>Road Trips</b><small>Year 4</small></button>
+</div></div></section>
+
+<section class="page" id="p3"><div class="content"><span class="badge">Our album 📸</span>
+<h1>Little moments</h1><p>Tap a polaroid to open it 🌸</p>
+<div class="photos" id="photos"></div>
+<input type="file" id="file" accept="image/*" hidden></div></section>
+
+<section class="page" id="p4"><div class="content"><span class="badge">A letter for you 💌</span>
+<div id="env" class="envelope" onclick="openLetter()">💌<small>tap to open</small></div>
+<article id="letter" class="letter hidden"><h1>My love,</h1>
+<p>Four years with you is something I will always be grateful for. We've collected so many little moments that became some of my favorite parts of life.</p>
+<p>Now we're about to begin something new. Our LDR may bring days when I miss you more than usual, but I never want distance to make you doubt how much I love you.</p>
+<p>I'll be here for the calls, the good mornings, the random stories, the “I miss you” messages, and all the little ways we choose each other.</p>
+<p>Until the next hug, the next date, and the day the distance feels small again—please remember that my heart is still right here with you.</p>
+<p><b>Happy 4th Anniversary, love. ♡</b><br>I love you, always.</p><p class="right sign">— Erica</p></article></div></section>
+
+<section class="page" id="p5"><div class="content"><span class="badge">For the days we're apart 🌙</span>
+<h1>Open when you need me</h1><div class="letters">
+<button data-p="💌|When you miss me|Close your eyes, take a breath, and remember: I am missing you too. Distance cannot erase what we have."><span class="ic">💌</span>When you miss me</button>
+<button data-p="🌧️|When you are sad|You do not have to be okay every second. Tell me. Let me be there, even from far away."><span class="ic">🌧️</span>When you are sad</button>
+<button data-p="🌙|Before you sleep|Good night, love. I hope you sleep knowing that someone out there is thinking about you and loving you."><span class="ic">🌙</span>Before you sleep</button>
+<button data-p="❤️|When you need love|Four years later, you are still the person I want to tell my little stories to. I love you."><span class="ic">❤️</span>When you need love</button>
+<button data-p="🌤️|When you are stressed|Breathe. You have handled so much already, and you are not doing this alone. I am proud of you."><span class="ic">🌤️</span>When you are stressed</button>
+<button data-p="🕊️|When we argue|We are on the same team. Let's cool down, talk kindly, and find our way back to each other."><span class="ic">🕊️</span>When we argue</button>
+</div></div></section>
+
+<section class="page" id="p6"><div class="content"><span class="badge">Our next chapter 🌍</span>
+<h1>Then comes the distance… 🌙</h1><p class="lead">October will be different. We'll have miles between us, but those miles don't get to rewrite our story.</p>
+<div class="map"><b>📍 Erica</b><div class="route"></div><b>📍 Josol</b></div>
+<button class="wide pri" data-p="🤞|Our LDR Promise|We will communicate, be patient, make time, celebrate little things, and keep choosing each other—even when we are far apart.">💗 Read our promise</button></div></section>
+
+<section class="page" id="p7"><div class="content"><span class="badge">Our LDR promises 🤍</span>
+<h1>Still choosing <em>us.</em></h1><p id="pm">Tap each promise to seal it ✨</p><div class="promises">
+<button data-p="💬|Always communicate|Even on busy days, we will make space to talk and understand each other."><span class="ic">💬</span>Always communicate</button>
+<button data-p="🤍|Choose each other|Every day, in little ways, we will keep choosing our relationship."><span class="ic">🤍</span>Choose each other</button>
+<button data-p="🌙|Goodnight calls|No matter how far, we can still end the day with a little piece of each other."><span class="ic">📞</span>Goodnight calls</button>
+<button data-p="🫂|Next-hug countdown|Every goodbye has a hello waiting for us."><span class="ic">🫂</span>Next-hug countdown</button>
+<button data-p="❤️|Never let distance decide|Distance is a circumstance. Our love is a choice we keep making."><span class="ic">🔒</span>Never let distance decide</button>
+</div></div></section>
+
+<section class="page" id="p8"><div class="content"><span class="badge">Our song 🎵</span>
+<div class="cassette" id="cass" onclick="toggleSong()"><div class="label">Erica ♡ Josol<br><small>October 7 • Side A</small></div><div class="reels"><i></i><i></i></div></div>
+<h1>Our song</h1><p id="musicmsg">Tap the cassette to play.</p>
+<audio id="audio" controls preload="none"><source src="assets/song.mp3" type="audio/mpeg"></audio></div></section>
+
+<section class="page" id="p9"><div class="content"><span class="badge">Until we meet again ✈️</span>
+<div class="travel">🧳 ✈️ 💗</div><h1>Until the next hug…</h1>
+<p class="lead">We'll have places between us, but there will always be a way back to each other.</p>
+<div class="ticket" id="ticket" onclick="this.classList.toggle('stamped')">🎫 Boarding pass<b>Erica ♡ Josol</b>Destination: our next hug<small>Tap to stamp</small></div></div></section>
+
+<section class="page final" id="p10"><div class="content"><div class="mini">our story continues ✨</div>
+<h1 class="huge">4 years.</h1><h2>One new chapter.</h2><h1>Still us. ♡</h1>
+<p>Happy 4th Anniversary, my love.</p><p><b>October 7</b></p><p class="sign">— Erica</p>
+<button class="lovebtn" onclick="burst(45)">I love you, Josol ♡</button></div></section>
+
+<div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modalbox"><button class="x" onclick="closeModal()" aria-label="Close">×</button><div id="mi"></div><h2 id="mt"></h2><p id="mb"></p><button id="mph" onclick="document.getElementById('file').click()">📷 Add / change photo</button> <button onclick="closeModal()">♡ Close</button></div></div>
+<script src="script.js"></script></body></html>
